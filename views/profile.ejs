@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>Profile Page</h1>
+    <p>Welcome to your profile <%= user.username %> </p>
+    <img src="<%= user.thumbnail%>" alt="">
+    <%if(user) {%>
+        <li><a href="/auth/logout">logout</a></li>
+    <%}else{ %>
+        <li><a href="/auth/login">login</a></li>
+    <%}%> 
+    <li><a href="/">HomePage</a></li>
+    <li><a href="/profile">Profile</a></li>
+</body>
+</html>
